@@ -1,0 +1,23 @@
+{
+    "scripts": {
+        "start": "node server.js",
+        "watch": "nodemon server.js",
+        "seed": "node seeds/index/js"
+    },
+    "devDependencies": {
+        // "nodemon": "[version]"
+    },
+    "dependencies": {
+       // "dotenv": //"[version]",
+       // "connect-session-sequelize": //"[version]",
+       // "bcrypt": //"[version]",
+       // "express": //"[version]",
+       // "express-handlebars": //"[version]",
+       // "express-session": //"[version]",
+       // "handlebars": //"[version]",
+       // "mysql2": //"[version]",
+       // "sequelize": //"[version]"
+       //
+    // // At least one new library, pkg, or technology
+    }
+}

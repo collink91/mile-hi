@@ -1,3 +1,4 @@
+const events = require("./events.js");
 //const [x] = require('./[modelroute]');
 
 // Key associations
@@ -9,6 +10,7 @@
 [xClass].belongsTo([xClass], {
   foreignKey: 'gallery_id',
 });
-
-module.exports = { [xClass], [xClass] };
 */
+
+module.exports = { events };
+// { [ADD BRACKETS], [xClass] };

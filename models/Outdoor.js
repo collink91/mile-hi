@@ -12,11 +12,11 @@ Outdoor.init(
       autoIncrement: true,
     },
     type: {
-      type: DataTypes.STRING,
+      type: DataTypes.VARCHAR("15"),
       allowNull: false,
     },
     where: {
-      type: DataTypes.DATE,
+      type: DataTypes.VARCHAR("15"),
       allowNull: false,
     },
     group_activity: {
@@ -27,7 +27,7 @@ Outdoor.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-},
+  },
   {
     sequelize,
     freezeTableName: true,

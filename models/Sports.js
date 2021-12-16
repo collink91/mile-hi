@@ -12,11 +12,11 @@ Sports.init(
       autoIncrement: true,
     },
     type: {
-      type: DataTypes.STRING,
+      type: "VARCHAR10",
       allowNull: false,
     },
     where: {
-      type: DataTypes.STRING,
+      type: "VARCHAR30",
       allowNull: false,
     },
     group_activity: {
@@ -27,7 +27,7 @@ Sports.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-},
+  },
   {
     sequelize,
     freezeTableName: true,

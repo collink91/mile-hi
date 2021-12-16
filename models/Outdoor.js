@@ -12,11 +12,11 @@ Outdoor.init(
       autoIncrement: true,
     },
     type: {
-      type: DataTypes.VARCHAR("15"),
+      type: "VARCHAR(10)",
       allowNull: false,
     },
     where: {
-      type: DataTypes.VARCHAR("15"),
+      type: "VARCHAR(10)",
       allowNull: false,
     },
     group_activity: {

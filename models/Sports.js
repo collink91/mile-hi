@@ -12,11 +12,11 @@ Sports.init(
       autoIncrement: true,
     },
     type: {
-      type: "VARCHAR10",
+      type: DataTypes.STRING,
       allowNull: false,
     },
     where: {
-      type: "VARCHAR30",
+      type: DataTypes.STRING,
       allowNull: false,
     },
     group_activity: {

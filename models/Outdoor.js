@@ -12,13 +12,21 @@ Outdoor.init(
       autoIncrement: true,
     },
     type: {
-      type: DataTypes.STRING,
+      type: "VARCHAR(15)",
       allowNull: false,
     },
     where: {
-      type: DataTypes.STRING,
+      type: "VARCHAR(40)",
       allowNull: false,
     },
+    // eventDate: {
+    //   type: DataTypes.DATE,
+    //   allowNull: false,
+    // },
+    // eventTime: {
+    //   type: DataTypes.TIME,
+    //   allowNull: false,
+    // },
     group_activity: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
@@ -33,6 +41,7 @@ Outdoor.init(
     freezeTableName: true,
     underscored: true,
     modelName: "Outdoor",
+    timestamps: false,
   }
 );
 

@@ -1,4 +1,7 @@
-const events = require("./events.js");
+const Outdoor = require("./Outdoor");
+const Sports = require("./Sports");
+
+// const events = require("./events.js");
 //const [x] = require('./[modelroute]');
 
 // Key associations
@@ -12,5 +15,5 @@ const events = require("./events.js");
 });
 */
 
-module.exports = { events };
+module.exports = { Sports, Outdoor };
 // { [ADD BRACKETS], [xClass] };

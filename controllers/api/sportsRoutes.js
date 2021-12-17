@@ -1,9 +1,9 @@
 const router = require("express").Router();
 const Sports = require("../../models/Sports");
 
-// url lands @ http://localhost:3001/sports
+// url lands @ http://localhost:3001/api/sports
 
-// CREATE a new Dep
+// CREATE a new Sport
 router.post("/", async (req, res) => {
   const sportsData = await Sports.create(req.body);
 
@@ -25,7 +25,7 @@ router.get("/", async (req, res) => {
 });
 
 // GET a SPORT  .get
-router.get("/id", async (req, res) => {
+router.get("/:id", async (req, res) => {
   try {
     const sportData = await Sports.findByPk(req.params.id);
     if (!sportData) {
@@ -39,7 +39,7 @@ router.get("/id", async (req, res) => {
 });
 
 // UPDATE a SPORT   .put
-router.put("/id", async (req, res) => {
+router.put("/:id", async (req, res) => {
   const sportData = await Sports.update(
     {
       type: req.body.type,
@@ -55,7 +55,7 @@ router.put("/id", async (req, res) => {
 });
 
 // DELETE a SPORT   .destroy
-router.delete("/id", async (req, res) => {
+router.delete("/:id", async (req, res) => {
   const sportData = await Sports.destroy({
     where: {
       id: req.params.id,

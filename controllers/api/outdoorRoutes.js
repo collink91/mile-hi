@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const Outdoor = require("../../models/Outdoor");
 
-// url lands @ http://localhost:3001/outdoor
+// url lands @ http://localhost:3001/api/outdoor
 
 // CREATE a new Outdoor
 router.post("/", async (req, res) => {
@@ -25,7 +25,7 @@ router.get("/", async (req, res) => {
 });
 
 // GET a Outdoor  .get
-router.get("/id", async (req, res) => {
+router.get("/:id", async (req, res) => {
   try {
     const outdoorData = await Outdoor.findByPk(req.params.id);
     if (!outdoorData) {
@@ -39,7 +39,7 @@ router.get("/id", async (req, res) => {
 });
 
 // UPDATE a Outdoor   .put
-router.put("/id", async (req, res) => {
+router.put("/:id", async (req, res) => {
   const outdoorData = await Outdoor.update(
     {
       type: req.body.type,
@@ -55,7 +55,7 @@ router.put("/id", async (req, res) => {
 });
 
 // DELETE a Outdoor   .destroy
-router.delete("/id", async (req, res) => {
+router.delete("/:id", async (req, res) => {
   const outdoorData = await Outdoor.destroy({
     where: {
       id: req.params.id,

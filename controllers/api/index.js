@@ -5,7 +5,7 @@ const router = require("express").Router();
 // router.use('/[name].js_example', [name_example]);
 
 const sportsRoutes = require("./sportsRoutes");
-const sportsRoutes = require("./outdoorRoutes");
+const outdoorRoutes = require("./outdoorRoutes");
 
 router.use("/sports", sportsRoutes);
 router.use("/outdoor", outdoorRoutes);

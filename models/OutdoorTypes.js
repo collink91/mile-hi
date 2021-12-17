@@ -20,7 +20,7 @@ OutdoorTypes.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: "Outdoor",
+    modelName: "OutdoorTypes",
     timestamps: false,
   }
 );

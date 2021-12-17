@@ -1,9 +1,12 @@
 const Outdoor = require("./Outdoor");
 const Sports = require("./Sports");
-const User = require("./User");
 
-// const events = require("./events.js");
-//const [x] = require('./[modelroute]');
+const User = require("./User")
+const Indoor = require("./Indoor");
+const Events = require("./Events")
+
+// Key associations, if needed
+
 
 // Key associations
 /*
@@ -16,5 +19,6 @@ const User = require("./User");
 });
 */
 
-module.exports = { Sports, Outdoor, User };
+module.exports = { Sports, Outdoor, User, Events, Indoor  };
 // { [ADD BRACKETS], [xClass] };
+

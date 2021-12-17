@@ -12,11 +12,19 @@ Sports.init(
       autoIncrement: true,
     },
     type: {
-      type: DataTypes.STRING,
+      type: "VARCHAR(15)",
       allowNull: false,
     },
     where: {
-      type: DataTypes.STRING,
+      type: "VARCHAR(40)",
+      allowNull: false,
+    },
+    event_date: {
+      type: "VARCHAR(15)",
+      allowNull: false,
+    },
+    event_time: {
+      type: "VARCHAR(15)",
       allowNull: false,
     },
     group_activity: {
@@ -33,6 +41,7 @@ Sports.init(
     freezeTableName: true,
     underscored: true,
     modelName: "Sports",
+    timestamps: false,
   }
 );
 

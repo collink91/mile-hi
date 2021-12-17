@@ -1,35 +1,61 @@
 .card {
-margin-top: 5px; 
-margin-left: 50px; 
-background: transparent;
-color: white;
-border: none;
-}
-
-.navNumbers {
-margin-top: 100px;
-}
-
-.card-title {
-font-size: 60px;
-color: white;
-}
-
-.background {
-background-image: url("https://s.abcnews.com/images/US/denver-2-gty-er-211130_1638310959270_hpMain_16x9_1600.jpg") ;
-background-repeat: no-repeat;
-background-size: cover;
-}
-
-.sidebar-right{
-color: white;
-flex-wrap: wrap;
-margin-top: 18%;
-margin-left: 200px;
-margin-right: 125px;
-text-align: center;
-}
-
-.sidebar-background {
-background: rgba(248, 244, 244, 0.452);
-}
+    margin-top: 15px; 
+    margin-left: 18px; 
+    background: transparent;
+    color: white;
+    border: none;
+    transition: ease-in-out .3s;
+    }
+    
+    /* .navNumbers {
+    margin-top: 20px;
+    } */
+    
+    .card-title {
+    font-size: 60px;
+    color: white;
+    position: relative;
+    z-index: 2;
+    }
+    
+    .card-text {
+    position: absolute;
+    right: 60px;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    z-index: 1;
+    }
+    
+    .background {
+    background-image: url("https://s.abcnews.com/images/US/denver-2-gty-er-211130_1638310959270_hpMain_16x9_1600.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    
+    .sidebar-right{
+    color: white;
+    flex-wrap: wrap;
+    margin-top: 20%;
+    margin-left: 200px;
+    margin-right: 125px;
+    text-align: center;
+    padding: 40px 10px 20px 10px;
+    }
+    
+    .sidebar-background {
+    background: rgba(68, 66, 66, 0.452);
+    background-size: 20px 10px;
+    }
+    
+    .card:hover {
+    transform: translateX(20px);
+    }
+    
+    .logo {
+    width: 180px;
+    height: 56px;
+    margin-left: 75px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    }

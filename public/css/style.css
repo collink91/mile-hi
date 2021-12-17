@@ -12,7 +12,7 @@
     } */
     
     .card-title {
-    font-size: 60px;
+    font-size: 45px;
     color: white;
     position: relative;
     z-index: 2;
@@ -36,11 +36,11 @@
     .sidebar-right{
     color: white;
     flex-wrap: wrap;
-    margin-top: 20%;
+    margin-top: 15%;
     margin-left: 200px;
     margin-right: 125px;
     text-align: center;
-    padding: 40px 10px 20px 10px;
+    padding: 40px 10px 20px 10px;  
     }
     
     .sidebar-background {
@@ -58,4 +58,18 @@
     margin-left: 75px;
     margin-top: 50px;
     margin-bottom: 20px;
+    }
+
+    .scroll {
+        overflow: hidden;
+        Overflow-y:scroll;
+        height: 350px;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .searchbar {
+    position: absolute;
+    right: 10px;
+top: 60px;
     }

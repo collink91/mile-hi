@@ -1,5 +1,6 @@
 const Outdoor = require("./Outdoor");
 const Sports = require("./Sports");
+const User = require("./User");
 
 // const events = require("./events.js");
 //const [x] = require('./[modelroute]');
@@ -15,5 +16,5 @@ const Sports = require("./Sports");
 });
 */
 
-module.exports = { Sports, Outdoor };
+module.exports = { Sports, Outdoor, User };
 // { [ADD BRACKETS], [xClass] };

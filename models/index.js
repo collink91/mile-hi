@@ -1,19 +1,8 @@
 const Outdoor = require("./Outdoor");
 const Sports = require("./Sports");
+const Indoor = require("./Indoor");
+const Events = require("./Events");
 
-// const events = require("./events.js");
-//const [x] = require('./[modelroute]');
+// Key associations, if needed
 
-// Key associations
-/*
-[xClass].hasMany([xClass], {
-  foreignKey: "[name]",
-});
-
-[xClass].belongsTo([xClass], {
-  foreignKey: 'gallery_id',
-});
-*/
-
-module.exports = { Sports, Outdoor };
-// { [ADD BRACKETS], [xClass] };
+module.exports = { Sports, Outdoor, Events, Indoor };

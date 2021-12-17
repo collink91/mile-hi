@@ -19,14 +19,14 @@ Sports.init(
       type: "VARCHAR(40)",
       allowNull: false,
     },
-    // eventDate: {
-    //   type: DataTypes.DATE,
-    //   allowNull: false,
-    // },
-    // eventTime: {
-    //   type: DataTypes.TIME,
-    //   allowNull: false,
-    // },
+    event_date: {
+      type: "VARCHAR(15)",
+      allowNull: false,
+    },
+    event_time: {
+      type: "VARCHAR(15)",
+      allowNull: false,
+    },
     group_activity: {
       type: DataTypes.BOOLEAN,
       allowNull: false,

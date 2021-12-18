@@ -8,12 +8,16 @@ Outdoor.init(
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true,
       autoIncrement: true,
+      primaryKey: true,
     },
-    type: {
-      type: "VARCHAR(15)",
-      allowNull: false,
+    outdoor_type_id: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: "OutdoorType",
+        key: "id",
+      },
     },
     where: {
       type: "VARCHAR(40)",

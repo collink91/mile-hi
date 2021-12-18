@@ -11,9 +11,13 @@ Sports.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    type: {
-      type: "VARCHAR(15)",
-      allowNull: false,
+    sport_type_id: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: "SportsType",
+        key: "id",
+      },
     },
     where: {
       type: "VARCHAR(40)",

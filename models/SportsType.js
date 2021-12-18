@@ -1,28 +1,28 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Sports extends Model {}
+class SportsType extends Model {}
 
-Sports.init(
+SportsType.init(
   {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true,
       autoIncrement: true,
+      primaryKey: true,
     },
     type: {
-      type: "VARCHAR(15)",
-      allowNull: false,
+      type: "VARCHAR(20)",
+      allowNull: true,
     },
   },
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: "Sports",
+    modelName: "SportsType",
     timestamps: false,
   }
 );
 
-module.exports = Sports;
+module.exports = SportsType;

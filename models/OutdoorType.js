@@ -1,28 +1,28 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class OutdoorTypes extends Model {}
+class OutdoorType extends Model {}
 
-OutdoorTypes.init(
+OutdoorType.init(
   {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true,
       autoIncrement: true,
+      primaryKey: true,
     },
     type: {
-      type: "VARCHAR(15)",
-      allowNull: false,
+      type: "VARCHAR(20)",
+      allowNull: true,
     },
   },
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: "OutdoorTypes",
+    modelName: "OutdoorType",
     timestamps: false,
   }
 );
 
-module.exports = OutdoorTypes;
+module.exports = OutdoorType;

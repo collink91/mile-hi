@@ -1,24 +1,24 @@
 const router = require("express").Router();
-const Outdoor = require("../../models/Outdoor");
+const Activities = require("../../models/Activities");
 
-// url lands @ http://localhost:3001/api/outdoor
+// url lands @ http://localhost:3001/api/activities
 
 // CREATE a new Outdoor
 router.post("/", async (req, res) => {
-  const outdoorData = await Outdoor.create(req.body);
+  const activitiesData = await Activities.create(req.body);
 
-  return res.json(outdoorData);
+  return res.json(activitiesData);
 });
 
 // GET all Outdoor .get
 router.get("/", async (req, res) => {
   try {
-    const outdoorData = await Outdoor.findAll();
-    if (!outdoorData) {
-      res.status(404).json({ message: "No OUTDOORS found in Database" });
+    const activitiesData = await Activities.findAll();
+    if (!activitiesData) {
+      res.status(404).json({ message: "No Activities found in Database" });
       return;
     }
-    res.status(200).json(outdoorData);
+    res.status(200).json(activitiesData);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -27,12 +27,12 @@ router.get("/", async (req, res) => {
 // GET a Outdoor  .get
 router.get("/:id", async (req, res) => {
   try {
-    const outdoorData = await Outdoor.findByPk(req.params.id);
-    if (!outdoorData) {
-      res.status(404).json({ message: "No OUTDOOR with this id!" });
+    const activitiesData = await Activities.findByPk(req.params.id);
+    if (!activitiesData) {
+      res.status(404).json({ message: "No Activities with this id!" });
       return;
     }
-    res.status(200).json(outdoorData);
+    res.status(200).json(activitiesData);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -40,7 +40,7 @@ router.get("/:id", async (req, res) => {
 
 // UPDATE a Outdoor   .put
 router.put("/:id", async (req, res) => {
-  const outdoorData = await Outdoor.update(
+  const activitiesData = await Activities.update(
     {
       type: req.body.type,
     },
@@ -56,7 +56,7 @@ router.put("/:id", async (req, res) => {
 
 // DELETE a Outdoor   .destroy
 router.delete("/:id", async (req, res) => {
-  const outdoorData = await Outdoor.destroy({
+  const outdoorData = await Activities.destroy({
     where: {
       id: req.params.id,
     },

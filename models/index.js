@@ -1,13 +1,14 @@
-const Activities = require("./Activities");
-const User = require("./User");
-
-module.exports = { User, Activities };
 
 /*
 /
 THESE MODELS CAN BE DELETED AS NEEDED; REPLACED BY ACTIVITIES
 /
 */
+SportsType.hasMany(Sports, {
+  foreignKey: "id",
+  onDelete: "CASCADE",
+});
+
 
 const Outdoor = require("./Outdoor");
 const Sports = require("./Sports");

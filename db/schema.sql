@@ -1,1 +1,2 @@
 CREATE DATABASE IF NOT EXISTS mile_hi_db;
+

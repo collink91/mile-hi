@@ -2,7 +2,7 @@ const { Sports } = require("../models");
 
 const sportsData = [
   {
-    type: "Volley Ball",
+    sport_type_id: 1,
     where: "Cheesman Park",
     event_date: "saturday",
     event_time: "12pm",
@@ -11,7 +11,7 @@ const sportsData = [
       "DU V CUBoulder, bring essentail oils and gluten free snacks, meet at noon this Saturday",
   },
   {
-    type: "Football",
+    sport_type_id: 2,
     where: "Washington Park",
     event_date: "sunday",
     event_time: "2pm",

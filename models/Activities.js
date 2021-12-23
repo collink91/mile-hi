@@ -1,40 +1,46 @@
-/*
-/
-THIS MODEL CAN BE DELETED AS NEEDED; REPLACED BY ACTIVITIES
-/
-*/
-
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
+// const bcrypt = require('bcrypt');
 
-class Outdoor extends Model {}
+/*
+NOTE: If we decide to use a login for this section:
 
-Outdoor.init(
+class User extends Model {
+  checkPassword(loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
+  }
+}
+*/
+
+class Activities extends Model {}
+
+Activities.init(
   {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      autoIncrement: true,
       primaryKey: true,
+      autoIncrement: true,
     },
-    outdoor_type_id: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: "OutdoorType",
-        key: "id",
-      },
+    keyword: {
+      type: DataTypes.ENUM,
+      values: ["Indoor", "Outdoor", "Events", "Sports"],
+      allowNull: false,
+    },
+    type: {
+      type: "VARCHAR(20)",
+      allowNull: false,
     },
     where: {
       type: "VARCHAR(40)",
       allowNull: false,
     },
     event_date: {
-      type: "VARCHAR(15)",
+      type: "VARCHAR(40)",
       allowNull: true,
     },
     event_time: {
-      type: "VARCHAR(15)",
+      type: "VARCHAR(40)",
       allowNull: true,
     },
     group_activity: {
@@ -48,11 +54,11 @@ Outdoor.init(
   },
   {
     sequelize,
+    timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "Outdoor",
-    timestamps: false,
+    modelName: "Activities",
   }
 );
 
-module.exports = Outdoor;
+module.exports = Activities;

@@ -1,3 +1,9 @@
+/*
+/
+THIS MODEL CAN BE DELETED AS NEEDED; REPLACED BY ACTIVITIES
+/
+*/
+
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 

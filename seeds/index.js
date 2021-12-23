@@ -1,3 +1,9 @@
+/*
+/
+CHANGE ALL FOLLOWING *EXCEPT FOR USER* TO ACTIVITIES SEED (COMBINE TABLES)
+/
+*/
+
 const sequelize = require("../config/connection");
 const seedOutdoor = require("./outdoorData");
 const seedSports = require("./sportsData");

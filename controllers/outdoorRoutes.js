@@ -11,7 +11,7 @@ module.exports = async (req, res) => {
       where: { keyword: "Outdoor" },
     });
     if (!outdoorData) {
-      res.status(404).json({ message: "No outdoor activities found" });
+      res.status(404).json({ message: "No Outdoor activities found" });
       return;
     }
     // Renders for Handlebars

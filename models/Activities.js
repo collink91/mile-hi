@@ -12,9 +12,9 @@ class User extends Model {
 }
 */
 
-class Events extends Model {}
+class Activities extends Model {}
 
-Events.init(
+Activities.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -22,13 +22,18 @@ Events.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    keyword: {
+      type: DataTypes.ENUM,
+      values: ["Indoor", "Outdoor", "Events", "Sports"],
+      allowNull: false,
+    },
     type: {
-      type: "VARCHAR(40)",
+      type: "VARCHAR(20)",
       allowNull: false,
     },
     where: {
       type: "VARCHAR(40)",
-      allowNull: true,
+      allowNull: false,
     },
     event_date: {
       type: "VARCHAR(40)",
@@ -52,8 +57,8 @@ Events.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "Events",
+    modelName: "Activities",
   }
 );
 
-module.exports = Events;
+module.exports = Activities;

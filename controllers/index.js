@@ -1,12 +1,15 @@
 const router = require("express").Router();
 
+const indoorHandler = 
 const apiRoutes = require("./api");
-//const eventRoutes.js = require("./eventsRoutes")
-// Any other .js file routes can be added here
-// const [name] = require("./[link.js]");
+// All non-JSON-modified routes go here (i.e., direct links to each activities page)
+
+router.get('/outdoor', (req, res) => {
+    // Either import outdoorRoutes here or put it here directly
+})
+
+router.get('/indoor', indoorHandler)
 
 router.use("/api", apiRoutes);
-// router.use("/events", eventRoutes);
-// router.use('/', [name]);
 
 module.exports = router;

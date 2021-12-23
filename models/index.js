@@ -1,24 +1,19 @@
-const Outdoor = require("./Outdoor");
-const Sports = require("./Sports");
+const Activities = require("./Activities");
+const User = require("./User");
 
-const User = require("./User")
-const Indoor = require("./Indoor");
-const Events = require("./Events")
+module.exports = { User, Activities };
 
-// Key associations, if needed
-
-
-// Key associations
 /*
-[xClass].hasMany([xClass], {
-  foreignKey: "[name]",
-});
-
-[xClass].belongsTo([xClass], {
-  foreignKey: 'gallery_id',
-});
+/
+THESE MODELS CAN BE DELETED AS NEEDED; REPLACED BY ACTIVITIES
+/
 */
 
-module.exports = { Sports, Outdoor, User, Events, Indoor  };
-// { [ADD BRACKETS], [xClass] };
+const Outdoor = require("./Outdoor");
+const Sports = require("./Sports");
+const Indoor = require("./Indoor");
+const Events = require("./Events");
+//const User = require("./User");
 
+// Removed User from here
+// module.exports = { Sports, Outdoor, Indoor, Events };

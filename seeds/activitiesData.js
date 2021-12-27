@@ -95,6 +95,16 @@ const activitiesData = [
     description:
       "Looking for 2 other players to join the Denver Rec Center Football Team this sunday at 2pm",
   },
+  {
+    keyword: "Outdoor",
+    type: "Royal Arch",
+    where: "Boulder",
+    event_date: null,
+    event_time: null,
+    group_activity: false,
+    description:
+      "A popular 3.1-mile out-and-back trail above Chautauqua with fantastic views over Boulder and the Front Range. Pack plenty of water and sunscreen.",
+  },
 ];
 
 const seedActivities = () => Activities.bulkCreate(activitiesData);

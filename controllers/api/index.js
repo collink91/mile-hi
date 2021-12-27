@@ -1,16 +1,16 @@
+/*
+/
+These routes are being called for CREATING (Post) Activities
+/
+*/
+
 const router = require("express").Router();
 
-const indoorRoutes = require("./indoorRoutes");
-const sportsRoutes = require("../sportsRoutes");
-const outdoorRoutes = require("../outdoorRoutes");
-const eventsRoutes = require("./eventsRoutes");
+const activitiesRoutes = require("./activitiesRoutes");
 // Accesses user DB
 const userRoutes = require("./userRoutes");
 
-router.use("/indoor", indoorRoutes);
-router.use("/sports", sportsRoutes);
-router.use("/outdoor", outdoorRoutes);
-router.use("/events", eventsRoutes);
+router.use("/activities", activitiesRoutes);
 // Accesses user DB
 router.use("/user", userRoutes);
 

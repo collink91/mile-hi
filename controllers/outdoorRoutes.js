@@ -1,6 +1,15 @@
+/*
+
+ **This needs a Handlebars template in order to function properly -- TEST FIRST**
+
+ **ONCE THIS IS CONFIRMED AS WORKING: Duplicate for Events, Sports, and Indoor, changing:
+ - Keyword (await)
+ - 404 message ("No _____ activities found")
+ - Render
+
+ */
+
 const Activities = require("../models/Activities");
-// This sends the JSON data to a Handlesbars template so it can be generated as HTML
-const outdoorRenderer = require("../views/outdoor.handlebars");
 
 // url lands @ http://localhost:3001/outdoor
 

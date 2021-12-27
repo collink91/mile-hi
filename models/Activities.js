@@ -3,7 +3,9 @@ const sequelize = require("../config/connection");
 // const bcrypt = require('bcrypt');
 
 /*
-NOTE: If we decide to use a login for this section:
+// NOTE: If we decide to use a login for this section:
+
+// Add bcrypt const (above) and following commands(?)
 
 class User extends Model {
   checkPassword(loginPw) {

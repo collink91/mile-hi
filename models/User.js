@@ -1,3 +1,9 @@
+/*
+/
+UPDATED: This requires individualHooks in order for the pw to be hashed properly in userData; see userData.js for more info
+/
+*/
+
 const { Model, DataTypes } = require("sequelize");
 const bcrypt = require("bcrypt");
 const sequelize = require("../config/connection");

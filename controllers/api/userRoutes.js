@@ -40,7 +40,6 @@ router.post("/login", async (req, res) => {
     }
 
     const validPassword = await dbUserData.checkPassword(req.body.password);
-
     if (!validPassword) {
       res
         .status(400)
@@ -50,10 +49,13 @@ router.post("/login", async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
+      /*
+      // Used to test user routes in production -- WORKING (avoid publicly console.logging cookies)
       console.log(
-        "🚀 ~ file: user-routes.js ~ line 57 ~ req.session.save ~ req.session.cookie",
+        "🚀 ~ file: user-routes.js ~ req.session.save ~ req.session.cookie",
         req.session.cookie
       );
+      */
 
       res
         .status(200)

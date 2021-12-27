@@ -30,11 +30,11 @@ Activities.init(
       allowNull: false,
     },
     type: {
-      type: "VARCHAR(20)",
+      type: "VARCHAR(60)",
       allowNull: false,
     },
     where: {
-      type: "VARCHAR(40)",
+      type: "VARCHAR(80)",
       allowNull: false,
     },
     event_date: {

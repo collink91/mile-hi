@@ -5,6 +5,11 @@ const Activities = require("../../models/Activities");
 
 // CREATE a new Activity (POST)
 router.post("/", async (req, res) => {
+  /* 
+  if (!req.isAuthenticated()) {
+    // do something different
+  }
+  */
   const activitiesData = await Activities.create(req.body);
 
   return res.json(activitiesData);

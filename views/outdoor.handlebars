@@ -1,12 +1,21 @@
 <div>
     <h2>Outdoor</h2>
     <div class="scroll">
+      {{#each activities}}
         {{keyword}}
-        <br />
+        {{!-- keyword = Drop-down menu with these options: Indoor, Outdoor, Events, Sports<br /> --}}
         {{type}}
-        <br />
+        {{!-- type = Short title of activity <br /> --}}
         {{where}}
-        <br />
+        {{!-- <br /> --}}
+        {{event_date}}
+        {{!-- event_date IS OPTIONAL: tie in with JQuery calendar? <br /> --}}
+         {{event_time}}
+        {{!-- event_time IS OPTIONAL: tie in with JQuery calendar? <br /> --}}
+        {{group_activity}}
+        {{!-- group_activity IS OPTIONAL <br /> --}}
         {{description}}
+        {{/each}}
+
     </div>
 </div>

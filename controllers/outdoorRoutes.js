@@ -16,7 +16,7 @@ const Activities = require("../models/Activities");
 // GET all Outdoor activities
 module.exports = async (req, res) => {
   try {
-    const outdoorData = await Activities.find({
+    const outdoorData = await Activities.findAll({
       where: { keyword: "Outdoor" },
     });
     if (!outdoorData) {

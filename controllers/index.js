@@ -20,6 +20,7 @@ const apiRoutes = require("./api");
 
 //This links to the individual pages as a GET function (pulling all associated results)
 router.get("/outdoor", outdoorHandler);
+router.get("/", (req, res) => res.render("home"));
 /*
 //UNCOMMENT FOLLOWING: 
 

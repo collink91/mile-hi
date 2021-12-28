@@ -6,7 +6,7 @@ const Activities = require("../../models/Activities");
 // CREATE a new Activity (POST)
 router.post("/", async (req, res) => {
   /* 
-  if (!req.isAuthenticated()) {
+  if (!req.session.loggedIn) {
     // do something different
   }
   */

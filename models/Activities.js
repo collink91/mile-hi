@@ -3,7 +3,9 @@ const sequelize = require("../config/connection");
 // const bcrypt = require('bcrypt');
 
 /*
-NOTE: If we decide to use a login for this section:
+// NOTE: If we decide to use a login for this section:
+
+// Add bcrypt const (above) and following commands(?)
 
 class User extends Model {
   checkPassword(loginPw) {
@@ -28,11 +30,11 @@ Activities.init(
       allowNull: false,
     },
     type: {
-      type: "VARCHAR(20)",
+      type: "VARCHAR(60)",
       allowNull: false,
     },
     where: {
-      type: "VARCHAR(40)",
+      type: "VARCHAR(80)",
       allowNull: false,
     },
     event_date: {

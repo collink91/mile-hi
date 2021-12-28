@@ -3,14 +3,19 @@ const Activities = require("../../models/Activities");
 
 // url lands @ http://localhost:3001/api/activities
 
-// CREATE a new Outdoor
+// CREATE a new Activity (POST)
 router.post("/", async (req, res) => {
+  /* 
+  if (!req.isAuthenticated()) {
+    // do something different
+  }
+  */
   const activitiesData = await Activities.create(req.body);
 
   return res.json(activitiesData);
 });
 
-// GET all Outdoor .get
+// GET all Activities (GET)
 router.get("/", async (req, res) => {
   try {
     const activitiesData = await Activities.findAll();
@@ -24,7 +29,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-// GET a Outdoor  .get
+// GET a specific Activity
 router.get("/:id", async (req, res) => {
   try {
     const activitiesData = await Activities.findByPk(req.params.id);
@@ -38,30 +43,6 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// UPDATE a Outdoor   .put
-router.put("/:id", async (req, res) => {
-  const activitiesData = await Activities.update(
-    {
-      type: req.body.type,
-    },
-    {
-      where: {
-        id: req.params.id,
-      },
-    }
-  );
-
-  return res.json(outdoorData);
-});
-
-// DELETE a Outdoor   .destroy
-router.delete("/:id", async (req, res) => {
-  const outdoorData = await Activities.destroy({
-    where: {
-      id: req.params.id,
-    },
-  });
-  return res.json(outdoorData);
-});
+// Updating and Deleting not required; keep in icebox for now
 
 module.exports = router;

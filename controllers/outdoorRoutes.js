@@ -1,14 +1,3 @@
-/*
-
- **This needs a Handlebars template in order to function properly -- TEST FIRST**
-
- **ONCE THIS IS CONFIRMED AS WORKING: Duplicate for Events, Sports, and Indoor, changing:
- - Keyword (await)
- - 404 message ("No _____ activities found")
- - Render
-
- */
-
 const Activities = require("../models/Activities");
 
 // url lands @ http://localhost:3001/outdoor

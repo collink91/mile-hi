@@ -1,8 +1,21 @@
-<div class="sidebar-right sidebar-background">
+<div>
     <h2>Events</h2>
     <div class="scroll">
-        <p>
-            Hi I'm Collin
-        </p>
+      {{#each activities}}
+        {{keyword}}
+        {{!-- keyword = Drop-down menu with these options: Indoor, Outdoor, Events, Sports<br /> --}}
+        {{type}}
+        {{!-- type = Short title of activity <br /> --}}
+        {{where}}
+        {{!-- <br /> --}}
+        {{event_date}}
+        {{!-- event_date IS OPTIONAL: tie in with JQuery calendar? <br /> --}}
+         {{event_time}}
+        {{!-- event_time IS OPTIONAL: tie in with JQuery calendar? <br /> --}}
+        {{group_activity}}
+        {{!-- group_activity IS OPTIONAL <br /> --}}
+        {{description}}
+        {{/each}}
+
     </div>
 </div>

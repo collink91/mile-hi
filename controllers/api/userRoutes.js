@@ -18,7 +18,6 @@ router.post("/", async (req, res) => {
       res.status(200).json(dbUserData);
     });
   } catch (err) {
-    console.log(err);
     res.status(500).json(err);
   }
 });
@@ -49,14 +48,6 @@ router.post("/login", async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
-      /*
-      // Used to test user routes in production -- WORKING (avoid publicly console.logging cookies)
-      console.log(
-        "🚀 ~ file: user-routes.js ~ req.session.save ~ req.session.cookie",
-        req.session.cookie
-      );
-      */
-
       res
         .status(200)
         .json({ user: dbUserData, message: "You are now logged in!" });

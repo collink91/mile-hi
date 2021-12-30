@@ -25,6 +25,8 @@ const sess = {
 
 app.use(session(sess));
 
+app.use(express.static("assets/images"))
+
 const hbs = exphbs.create({ helpers });
 
 app.engine("handlebars", hbs.engine);

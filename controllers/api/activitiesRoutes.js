@@ -1,19 +1,27 @@
 const router = require("express").Router();
-const Activities = require("../../models/Activities");
+// NOTE: Do we need "restore" here?
+const { Activities, restore } = require("../../models/Activities");
+// This ensures all new activities are authenticated through user login
+const authUser = require("../../utils/auth");
 
 // url lands @ http://localhost:3001/api/activities
 
 // CREATE a new Activity (POST)
-router.post("/", async (req, res) => {
-  /* 
-  if (!req.session.loggedIn) {
-    // do something different
-  }
-  */
-  const activitiesData = await Activities.create(req.body);
+router.post("/", authUser, async (req, res) => {
+  const body = req.body;
 
-  return res.json(activitiesData);
+  try {
+    const newActivity = await Activities.create({
+      ...body,
+      userEmail: req.session.email,
+    });
+    res.json(newActivity);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
+
+module.exports = authUser;
 
 // GET all Activities (GET)
 router.get("/", async (req, res) => {

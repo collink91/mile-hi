@@ -14,21 +14,13 @@
     .card-title {
     font-size: 45px;
     color: white;
-    position: relative;
-    z-index: 2;
-    }
-    
-    .card-text {
-    position: absolute;
-    right: 60px;
-    top: 10px;
-    left: 10px;
-    bottom: 10px;
-    z-index: 1;
+    /* position: relative; */
+    display: flex;
+    flex-shrink: 1;
     }
     
     .background {
-    background-image: url("https://s.abcnews.com/images/US/denver-2-gty-er-211130_1638310959270_hpMain_16x9_1600.jpg") ;
+    background-image: url("https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/denver/012_3_0174_jpeg_607b6f51-1eae-41b8-a699-baf99a13ff7d.jpg") ;
     background-repeat: no-repeat;
     background-size: cover;
     }
@@ -44,7 +36,7 @@
     }
     
     .sidebar-background {
-    background: rgba(68, 66, 66, 0.452);
+    background: rgba(68, 66, 66, 0.616);
     background-size: 20px 10px;
     }
     
@@ -55,7 +47,7 @@
     .logo {
     width: 180px;
     height: 56px;
-    margin-left: 75px;
+    margin-left: 25px;
     margin-top: 50px;
     margin-bottom: 20px;
     }
@@ -72,4 +64,32 @@
     position: absolute;
     right: 10px;
 top: 60px;
+    }
+
+    #red {
+        color: #ff1616;
+    }
+
+    #orange {
+
+        color: #ff9350 ;
+    
+    }
+
+    #yellow {
+
+        color: #ffdf2b;
+    }
+
+    #green {
+
+        color: #7ed957;
+    }
+
+    #blue{
+        color: #8096ff;
+    }
+
+    .navBackground {
+    background-color: white;
     }

@@ -20,7 +20,7 @@ router.post("/", authUser, async (req, res) => {
   }
 });
 
-module.exports = authUser;
+(module.exports = authUser), router;
 
 // Updating and Deleting not required; keep in icebox for now
 

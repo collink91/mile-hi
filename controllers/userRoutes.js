@@ -1,8 +1,11 @@
 const router = require("express").Router();
-const { User } = require("../../models");
+const { User } = require("../models");
+// const authUser = require("../utils/auth");
+
+//localhost:3001/user
 
 // ---- SIGN UP ---- CREATE
-router.post("/signup", async (req, res) => {
+http: router.post("/signup", async (req, res) => {
   try {
     const dbUserData = await User.create({
       username: req.body.username,
@@ -27,6 +30,7 @@ router.post("/login", async (req, res) => {
     const dbUserData = await User.findOne({
       where: {
         email: req.body.email,
+        password: req.body.password,
       },
     });
 

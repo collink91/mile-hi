@@ -5,10 +5,14 @@ TO DO (OPTIONAL): Create Search bar routes for GETTING Activities by user-entere
 */
 
 const router = require("express").Router();
-const outdoorHandler = require("./outdoorRoutes");
-const indoorHandler = require("./indoorRoutes");
+
 const eventsHandler = require("./eventsRoutes");
+const indoorHandler = require("./indoorRoutes");
+const outdoorHandler = require("./outdoorRoutes");
 const sportsHandler = require("./sportsRoutes");
+const userHandler = require("./userRoutes");
+
+const activitiesHandler = require("./api/activitiesRoutes");
 
 //Connects all /api/ routes
 const apiRoutes = require("./api");
@@ -18,6 +22,9 @@ router.get("/outdoor", outdoorHandler);
 router.get("/indoor", indoorHandler);
 router.get("/events", eventsHandler);
 router.get("/sports", sportsHandler);
+router.get("/activities", activitiesHandler);
+router.get("/user", userHandler);
+
 router.get("/", (req, res) => res.render("home"));
 
 //This links to the login/sign-up page on the site (or redirects the user if already logged in)
@@ -26,7 +33,6 @@ router.get("/login", (req, res) => {
     res.redirect("/");
     return;
   }
-
   res.render("login");
 });
 

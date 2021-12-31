@@ -24,6 +24,10 @@ Activities.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    user_id: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     keyword: {
       type: DataTypes.ENUM,
       values: ["Indoor", "Outdoor", "Events", "Sports"],
@@ -54,6 +58,7 @@ Activities.init(
       allowNull: false,
     },
   },
+
   {
     sequelize,
     timestamps: false,

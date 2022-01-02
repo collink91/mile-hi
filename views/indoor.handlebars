@@ -12,10 +12,13 @@
         {{!-- event_date IS OPTIONAL: tie in with JQuery calendar? <br /> --}}
          {{event_time}}
         {{!-- event_time IS OPTIONAL: tie in with JQuery calendar? <br /> --}}
-        {{group_activity}}
+        {{#if group_activity}}
+        This is a group activity
+        {{else}}
+        This is not a group activity
+        {{/if}}
         {{!-- group_activity IS OPTIONAL <br /> --}}
         {{description}}
         {{/each}}
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, recusandae sint pariatur autem quis aspernatur molestias! Rerum unde cum vero quaerat nisi architecto vitae necessitatibus blanditiis autem a corrupti aspernatur, saepe maxime beatae in. Sequi nemo nesciunt nam beatae voluptatem adipisci dolore, voluptate debitis quisquam a dignissimos earum doloribus sint, eum ratione quos minima cum ipsum consequuntur molestias sapiente consequatur velit veniam dolores. Ab dolor adipisci quibusdam amet praesentium ipsam ratione necessitatibus cum. Officia sit, voluptatum omnis officiis minima numquam fugiat illum quas accusantium illo iste voluptatibus! Aut non voluptatibus mollitia est nemo ipsam. Eligendi quia nesciunt eius quam repudiandae vitae exercitationem similique. Ratione optio molestiae facere, corrupti beatae aspernatur doloremque ex, rerum quod nostrum nesciunt quidem possimus ipsum voluptate odio dolores quam incidunt et! Illo beatae consectetur nisi illum aliquam atque ex odio dicta impedit adipisci perferendis magnam maiores accusantium sapiente ut totam error vitae reprehenderit, in omnis voluptas temporibus dignissimos unde! Numquam culpa vero provident sed rem quo ea incidunt itaque vitae quam illum eligendi hic ipsa animi quidem perspiciatis nihil nam natus porro repellendus, ad dolorum? Delectus, necessitatibus. Reprehenderit cupiditate blanditiis, nesciunt architecto aperiam minus vero harum, eum esse deleniti laboriosam cumque sint fugiat illo doloribus quod!</p>
     </div>
 </div>

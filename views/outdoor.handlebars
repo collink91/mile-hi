@@ -12,10 +12,13 @@
         {{!-- event_date IS OPTIONAL: tie in with JQuery calendar? <br /> --}}
          {{event_time}}
         {{!-- event_time IS OPTIONAL: tie in with JQuery calendar? <br /> --}}
-        {{group_activity}}
+        {{#if group_activity}}
+        This is a group activity
+        {{else}}
+        This is not a group activity
+        {{/if}}
         {{!-- group_activity IS OPTIONAL <br /> --}}
         {{description}}
         {{/each}}
-
     </div>
 </div>

@@ -1,8 +1,4 @@
-/*
-/
-UPDATED: This requires individualHooks in order for the pw to be hashed properly in userData; see userData.js for more info
-/
-*/
+//NOTE: This requires individualHooks in order for the pw to be hashed properly in userData; see userData.js for more info
 
 const { Model, DataTypes } = require("sequelize");
 const bcrypt = require("bcrypt");
@@ -47,11 +43,6 @@ User.init(
       async beforeCreate(newUserData) {
         newUserData.password = await bcrypt.hash(newUserData.password, 8);
         return newUserData;
-      },
-      beforeUpdate: async (updatedUserData) => {
-        updatedUserData.password = await bcrypt.hash(newUserData.password, 8);
-        return newUserData;
-        return updatedUserData;
       },
     },
     sequelize,

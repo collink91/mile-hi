@@ -11,15 +11,6 @@ Activities.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    /*
-    /
-    This can probably be removed:
-    /
-    user_id: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    */
     keyword: {
       type: DataTypes.ENUM,
       values: ["Indoor", "Outdoor", "Events", "Sports"],

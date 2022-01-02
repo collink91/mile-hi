@@ -1,7 +1,5 @@
 /*
-/
-TO DO (OPTIONAL): Create Search bar routes for GETTING Activities by user-entered values
-/
+OPTIONAL: Create Search bar routes to "GET" Activities by user-entered values (see below commands)
 */
 
 const router = require("express").Router();
@@ -10,7 +8,7 @@ const eventsHandler = require("./eventsRoutes");
 const indoorHandler = require("./indoorRoutes");
 const outdoorHandler = require("./outdoorRoutes");
 const sportsHandler = require("./sportsRoutes");
-//const activitiesHandler = require("./api/activitiesRoutes");
+//Search bar? const activitiesHandler = require("./api/activitiesRoutes");
 
 //Connects all /api/ routes
 const apiRoutes = require("./api");
@@ -20,7 +18,7 @@ router.get("/outdoor", outdoorHandler);
 router.get("/indoor", indoorHandler);
 router.get("/events", eventsHandler);
 router.get("/sports", sportsHandler);
-//router.get("/activities", activitiesHandler);
+//Search bar? router.get("/activities", activitiesHandler);
 
 router.get("/", (req, res) => res.render("homePage"));
 
@@ -42,7 +40,7 @@ router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
-//This links to the activities page on the site -- Requires user login
+//This links to the activities page on the site (requires user login)
 router.get("/new-activity", (req, res) => {
   if (!req.session.loggedIn) {
     res.redirect("/login");

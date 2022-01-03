@@ -64,10 +64,21 @@
     animation: kenburns-top-left 5s ease-out reverse both;
   }
 
+  .animation-wrapper {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
 .background {
   background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
   background-size: cover;
-  z-index: -1;
   background-image: url(https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/denver/012_3_0174_jpeg_607b6f51-1eae-41b8-a699-baf99a13ff7d.jpg);
 }
 

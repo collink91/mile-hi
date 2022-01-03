@@ -1,10 +1,9 @@
 /*
-/
-UPDATED: individualHooks added for pw to be properly hashed
+NOTE: individualHooks added for pw to be properly hashed
 Set {individualHooks: true}
 This is NOT a good idea for large databases as it can dramatically impact performance
-/
 */
+
 const { User } = require("../models");
 
 const userData = [

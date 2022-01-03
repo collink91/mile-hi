@@ -1,8 +1,8 @@
 const Activities = require("../models/Activities");
 
-// url lands @ http://localhost:3001/events
+// URL lands @ http://localhost:3001/events
 
-// GET all Events activities
+// GET all Events activities (exported as function)
 module.exports = async (req, res) => {
   try {
     const eventsData = await Activities.findAll({

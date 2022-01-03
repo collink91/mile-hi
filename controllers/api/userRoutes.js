@@ -1,8 +1,7 @@
 const router = require("express").Router();
 const { User } = require("../../models");
-// const authUser = require("../utils/auth");
 
-//localhost:3001/api/user/...
+// URL lands at localhost:3001/login for "Signup" and "Login"
 
 // ---- SIGN UP ---- CREATE
 router.post("/signup", async (req, res) => {
@@ -50,14 +49,8 @@ router.post("/login", async (req, res) => {
     }
 
     // ---- SAVE SESSION AND CREATE COOKIE ---- CREATE COOKIE (EXPIRES AFTER 86400 MSper server.js)
-
     req.session.save(() => {
       req.session.loggedIn = true;
-      console.log(
-        "🚀 ~ file: user-routes.js ~ line 57 ~ req.session.save ~ req.session.cookie",
-        req.session.cookie
-      );
-
       res
         .status(200)
         .json({ user: dbUserData, message: "Welcome to Mile Hi!" });

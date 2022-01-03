@@ -1,8 +1,8 @@
 const Activities = require("../models/Activities");
 
-// url lands @ http://localhost:3001/indoor
+// URL lands @ http://localhost:3001/indoor
 
-// GET all Indoor activities
+// GET all Indoor activities (exported as function)
 module.exports = async (req, res) => {
   try {
     const indoorData = await Activities.findAll({

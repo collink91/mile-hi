@@ -1,5 +1,4 @@
 /*
-/
 All Activities REQUIRE: 
 - keyword (Events, Outdoor, Indoor, Sports -- AS STRINGS)
 - type (very brief title)
@@ -10,7 +9,6 @@ OPTIONAL (btwn where and description):
 - event_date
 - // // // event_time
 - group_activity
-/
 */
 
 const { Activities } = require("../models");
@@ -30,10 +28,10 @@ const activitiesData = [
     keyword: "Events",
     type: "Denver Furcon",
     where: "Downtown Denver",
-    event_date: "August 2022",
+    event_date: "TBD in August 2022",
     // // // event_time: "",
     group_activity: "false",
-    description: "Denvers larget Furry Convention. UwU",
+    description: "Denver's largest Furry Convention. UwU.",
   },
   {
     keyword: "Events",
@@ -50,7 +48,7 @@ const activitiesData = [
     type: "Mile High Flea Market",
     where: "I-76 & 88th Ave., Denver",
     event_date: "Open Friday -- Sunday",
-    // // // event_time: "7:00 AM -- 5:00 PM",
+    event_time: "7:00 a.m. -- 5:00 p.m.",
     group_activity: "true",
     description: "Home to kiddie rides and thousands of sellers every weekend.",
   },
@@ -59,7 +57,7 @@ const activitiesData = [
     type: "Denver Boardgame Night",
     where: "Various locations around downtown Denver",
     event_date: "Every Wednesday",
-    // // // event_time: "Generally starts at 6:00 p.m.",
+    event_time: "Generally starts at 6:00 p.m.",
     group_activity: "true",
     description:
       "Established as a meet-up in 2012, this is Denver's go-to for meeting fellow board gamers. Visit www.denvergamenight.com for more info.",
@@ -68,152 +66,152 @@ const activitiesData = [
     keyword: "Outdoor",
     type: "Eldorado Canyon hike",
     where: "Eldorado Canyon Sate Park",
-    event_date: "saturday",
-    // // // event_time: "12pm",
+    // // // event_date:
+    // // // event_time:
     group_activity: "false",
     description:
-      "Crags Hotel Ruins and Continental divide Overlook. Prepare for a 3mile hike, ",
+      "Highlights include the ruins of the historic Crags Hotel and a Continental Divide overlook. Prepare for a 3-mile hike.",
   },
   {
     keyword: "Outdoor",
     type: "Bear Creek Lake hike",
     where: "Bear Creek Lake Regional Park",
-    event_date: "saturday",
-    // // // // event_time: "12pm",
+    // // // event_date: ""
+    // // // event_time: ""
     group_activity: "false",
     description:
-      "8miles of trail with great views. only 14miles from downtown. Bring Water!",
+      "8 miles of trail with great views. Only 14 miles from downtown Denver. Bring water!",
   },
   {
     keyword: "Sports",
-    type: "football",
-    where: "Cheesman Park",
-    event_date: "saturday",
-    // // // event_time: "12pm",
+    type: "Football",
+    where: "Cheeseman Park",
+    event_date: "Saturday",
+    event_time: "12:00 p.m.",
     group_activity: "true",
     description:
-      "DU V CUBoulder, bring essentail oils and gluten free snacks, meet at noon this Saturday",
+      "DU v. CU-Boulder. Bring essential oils and gluten-free snacks. Tailgate party starts at 10:30 a.m.",
   },
   {
     keyword: "Sports",
     type: "Volleyball",
     where: "Washington Park",
     event_date: "Sunday",
-    // // // event_time: "2pm",
+    event_time: "2:00 p.m.",
     group_activity: "true",
     description:
-      "Looking for 2 other players to join the Denver Rec Center Football Team this sunday at 2pm",
+      "Looking for two other players to join the Denver Rec Center Football Team!",
   },
   {
     keyword: "Outdoor",
-    type: "Hiking",
+    type: "Royal Arch hike",
     where: "Boulder",
-    event_date: null,
-    // // // event_time: null,
+    // // // event_date: ""
+    // // // event_time: ""
     group_activity: false,
     description:
       "A popular 3.1-mile out-and-back trail above Chautauqua with fantastic views over Boulder and the Front Range. Pack plenty of water and sunscreen.",
   },
   {
     keyword: "Sports",
-    type: "basketball",
+    type: "Rec basketball league",
     where: "Denver",
-    event_date: null,
-    // // // event_time: null,
+    // // // event_date: ""
+    // // // event_time: ""
     group_activity: false,
     description:
-      "A popular 3.1-mile out-and-back trail above Chautauqua with fantastic views over Boulder and the Front Range. Pack plenty of water and sunscreen.",
+      "Mixtape vape paleo fam. Salvia irony typewriter poke kinfolk. Synth forage chillwave portland normcore cloud bread listicle swag umami austin chia.",
   },
 
   {
     keyword: "Sports",
-    type: "bowling",
+    type: "Bowling club",
     where: "Denver",
-    event_date: null,
-    // // // event_time: null,
+    // // // event_date: ""
+    // // // event_time: ""
     group_activity: false,
     description:
-      "A popular 3.1-mile out-and-back trail above Chautauqua with fantastic views over Boulder and the Front Range. Pack plenty of water and sunscreen.",
+      "Mixtape vape paleo fam. Salvia irony typewriter poke kinfolk. Synth forage chillwave portland normcore cloud bread listicle swag umami austin chia.",
   },
   {
     keyword: "Sports",
     type: "dodgeball",
     where: "Denver",
-    event_date: null,
-    // // // event_time: null,
+    // // // event_date: ""
+    // // // event_time: ""
     group_activity: false,
     description:
-      "A popular 3.1-mile out-and-back trail above Chautauqua with fantastic views over Boulder and the Front Range. Pack plenty of water and sunscreen.",
+      "Mixtape vape paleo fam. Salvia irony typewriter poke kinfolk. Synth forage chillwave portland normcore cloud bread listicle swag umami austin chia.",
   },
   {
     keyword: "Sports",
-    type: "running",
+    type: "Trail running group",
     where: "Denver",
-    event_date: null,
-    // // // event_time: null,
+    // // // event_date: ""
+    // // // event_time: ""
     group_activity: false,
     description:
-      "A popular 3.1-mile out-and-back trail above Chautauqua with fantastic views over Boulder and the Front Range. Pack plenty of water and sunscreen.",
+      "Mixtape vape paleo fam. Salvia irony typewriter poke kinfolk. Synth forage chillwave portland normcore cloud bread listicle swag umami austin chia.",
   },
   {
     keyword: "Sports",
-    type: "cycling",
+    type: "Road cycling club",
     where: "Denver",
-    event_date: null,
-    // // // event_time: null,
+    // // // event_date: ""
+    // // // event_time: ""
     group_activity: false,
     description:
-      "A popular 3.1-mile out-and-back trail above Chautauqua with fantastic views over Boulder and the Front Range. Pack plenty of water and sunscreen.",
+      "Mixtape vape paleo fam. Salvia irony typewriter poke kinfolk. Synth forage chillwave portland normcore cloud bread listicle swag umami austin chia.",
   },
   {
     keyword: "Sports",
-    type: "pickleball",
+    type: "Pickleball fanatics unite!",
     where: "Denver",
-    event_date: null,
-    // // // event_time: null,
+    // // // event_date: ""
+    // // // event_time: ""
     group_activity: false,
     description:
-      "A popular 3.1-mile out-and-back trail above Chautauqua with fantastic views over Boulder and the Front Range. Pack plenty of water and sunscreen.",
+      "Mixtape vape paleo fam. Salvia irony typewriter poke kinfolk. Synth forage chillwave portland normcore cloud bread listicle swag umami austin chia.",
   },
   {
     keyword: "Sports",
-    type: "disc golf",
+    type: "Disc Golf 101",
     where: "Denver",
-    event_date: null,
-    // // // event_time: null,
+    // // // event_date: ""
+    // // // event_time: ""
     group_activity: false,
     description:
-      "A popular 3.1-mile out-and-back trail above Chautauqua with fantastic views over Boulder and the Front Range. Pack plenty of water and sunscreen.",
+      "Mixtape vape paleo fam. Salvia irony typewriter poke kinfolk. Synth forage chillwave portland normcore cloud bread listicle swag umami austin chia.",
   },
   {
     keyword: "Sports",
-    type: "flag football",
+    type: "Flag football camp",
     where: "Denver",
-    event_date: null,
-    // // // event_time: null,
+    // // // event_date: ""
+    // // // event_time: ""
     group_activity: false,
     description:
-      "A popular 3.1-mile out-and-back trail above Chautauqua with fantastic views over Boulder and the Front Range. Pack plenty of water and sunscreen.",
+      "Mixtape vape paleo fam. Salvia irony typewriter poke kinfolk. Synth forage chillwave portland normcore cloud bread listicle swag umami austin chia.",
   },
   {
     keyword: "Sports",
-    type: "softball",
+    type: "Junior softball league",
     where: "Denver",
-    event_date: null,
-    // // // event_time: null,
+    // // // event_date: ""
+    // // // event_time: ""
     group_activity: false,
     description:
-      "A popular 3.1-mile out-and-back trail above Chautauqua with fantastic views over Boulder and the Front Range. Pack plenty of water and sunscreen.",
+      "Mixtape vape paleo fam. Salvia irony typewriter poke kinfolk. Synth forage chillwave portland normcore cloud bread listicle swag umami austin chia.",
   },
   {
     keyword: "Sports",
-    type: "baseball",
+    type: "All-girls' baseball",
     where: "Denver",
-    event_date: null,
-    // // // event_time: null,
+    // // // event_date: ""
+    // // // event_time: ""
     group_activity: false,
     description:
-      "A popular 3.1-mile out-and-back trail above Chautauqua with fantastic views over Boulder and the Front Range. Pack plenty of water and sunscreen.",
+      "Mixtape vape paleo fam. Salvia irony typewriter poke kinfolk. Synth forage chillwave portland normcore cloud bread listicle swag umami austin chia.",
   },
 ];
 

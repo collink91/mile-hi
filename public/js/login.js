@@ -1,3 +1,5 @@
+// This js is for both the "Login" and "Sign up" features, which are on the same Handlebars page
+
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
@@ -14,7 +16,7 @@ const loginFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace("/");
     } else {
-      alert("Failed to log in.");
+      alert("Incorrect email or password. Please try again!");
     }
   }
 };
@@ -36,7 +38,7 @@ const signupFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace("/");
     } else {
-      alert("Failed to sign up.");
+      alert("Incorrect email or password. Please try again!");
     }
   }
 };

@@ -10,7 +10,6 @@ const eventsHandler = require("./eventsRoutes");
 const indoorHandler = require("./indoorRoutes");
 const outdoorHandler = require("./outdoorRoutes");
 const sportsHandler = require("./sportsRoutes");
-const userHandler = require("./userRoutes");
 
 const activitiesHandler = require("./api/activitiesRoutes");
 
@@ -23,9 +22,8 @@ router.get("/indoor", indoorHandler);
 router.get("/events", eventsHandler);
 router.get("/sports", sportsHandler);
 router.get("/activities", activitiesHandler);
-router.get("/user", userHandler);
 
-router.get("/", (req, res) => res.render("home"));
+router.get("/", (req, res) => res.render("homePage"));
 
 //This links to the login/sign-up page on the site (or redirects the user if already logged in)
 router.get("/login", (req, res) => {

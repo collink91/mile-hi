@@ -1,24 +1,30 @@
 <div>
-    <h3>Outdoor</h3>
-    <div class="scroll">
+  <h3>Outdoor</h3>
+  <div class="scroll">
+    <div class="post-margin">
       {{#each activities}}
-        {{keyword}}
-        {{!-- keyword = Drop-down menu with these options: Indoor, Outdoor, Events, Sports<br /> --}}
-        {{type}}
-        {{!-- type = Short title of activity <br /> --}}
-        {{where}}
-        {{!-- <br /> --}}
-        {{event_date}}
-        {{!-- event_date IS OPTIONAL: tie in with JQuery calendar? <br /> --}}
-         {{event_time}}
-        {{!-- event_time IS OPTIONAL: tie in with JQuery calendar? <br /> --}}
-        {{#if group_activity}}
-        This is a group activity
-        {{else}}
-        This is not a group activity
-        {{/if}}
-        {{!-- group_activity IS OPTIONAL <br /> --}}
-        {{description}}
-        {{/each}}
+      <strong>{{type}}</strong>
+      {{!-- type = Short title of activity <br /> --}}
+      <br>
+      {{where}}
+      {{!-- <br /> --}}
+      {{event_date}}
+      {{!-- event_date IS OPTIONAL: tie in with JQuery calendar? <br /> --}}
+      {{event_time}}
+      <br>
+      {{!-- event_time IS OPTIONAL: tie in with JQuery calendar? <br /> --}}
+      {{#if group_activity}}
+      This is a group activity
+      {{else}}
+      This is not a group activity
+      {{/if}}
+      <br>
+      {{!-- group_activity IS OPTIONAL <br /> --}}
+      {{description}}
+      <b></b>
+      <hr noshade>
+      {{/each}}
     </div>
+
+  </div>
 </div>

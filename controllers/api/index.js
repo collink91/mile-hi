@@ -1,13 +1,6 @@
-const activitiesRoutes = require("../api/activitiesRoutes");
-
-/*
-/
-These routes are being called for CREATING (Post) Activities
-/
-*/
-
 const router = require("express").Router();
 
+const activitiesRoutes = require("./activitiesRoutes");
 const userRoutes = require("./userRoutes");
 
 router.use("/activities", activitiesRoutes);

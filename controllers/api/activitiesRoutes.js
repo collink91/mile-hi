@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Activities } = require("../../models/Activities");
+const Activities = require("../../models/Activities");
 // This ensures all new activities are authenticated through user login
 const authUser = require("../../utils/auth");
 
@@ -16,12 +16,10 @@ router.post("/", authUser, async (req, res) => {
     });
     res.json(newActivity);
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
 
-(module.exports = authUser), router;
-
 // Updating and Deleting not required; keep in icebox for now
-
 module.exports = router;
